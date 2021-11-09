@@ -1,5 +1,14 @@
-console.log("executando js no terminal")
-var a = 1
-var b = 2
-console.log(a + b); 
+const express = require("express");
+const app = express()
 
+app.get('/',(req, res)=>{
+    console.log("Metodo get foi chamado")
+    res.send("Olá Mundo")
+})
+
+app.get('/rota',(req, res)=>{
+    console.log("Metodo get foi chamado na rota")
+    res.send("Estou dentro da rota")
+})
+
+app.listen(3030)
